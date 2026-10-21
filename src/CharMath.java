@@ -15,7 +15,13 @@
 public class CharMath {
     public static void main(String[] args) {
 
-        // Your code here
+        System.out.println("Numeric value of 'A': " + (int) 'A');
+        System.out.println("Numeric value of 'a': " + (int) 'a');
+        System.out.println("Numeric value of 'Z': " + (int) 'Z');
+        System.out.println("Numeric value of '0': " + (int) '0');
+        System.out.println("Numeric value of ' ': " + (int) ' ');
+
+
 
     }
 }
