@@ -6,15 +6,15 @@ Run `src/ScannerTrap.java` exactly as written. Enter `16` for the age, then try 
 
 **1. What actually happened?**
 
-[your answer]
+[The name worked but name wasnt recorded]
 
 **2. What did you expect to happen?**
 
-[your answer]
+[expected idk prob just age cuz it only aksed me for age]
 
 **3. Did the program crash, or did it just behave strangely?**
 
-[your answer]
+[behave strangely]
 
 ---
 
@@ -24,7 +24,7 @@ Run `src/ScannerTrap.java` exactly as written. Enter `16` for the age, then try 
 
 **1. So what does the next `nextLine()` read?**
 
-[your answer]
+
 
 **2. Why doesn't this happen if you use `nextInt()` twice in a row?**
 
@@ -37,12 +37,16 @@ Run `src/ScannerTrap.java` exactly as written. Enter `16` for the age, then try 
 **1. Add the fix to `ScannerTrap.java`. Paste your corrected lines here:**
 
 ```java
-// your fix
+int age = input.nextInt();
+input.nextLine(); // Consume the leftover newline
+
+System.out.print("Enter your full name: ");
+String name = input.nextLine();
 ```
 
 **2. Why does a bare `input.nextLine();` with nothing assigned to it solve the problem?**
 
-[your answer]
+It consumes the leftover newline from pressing Enter after the age. Then the next nextLine() waits for and reads the name.
 
 ---
 
@@ -52,16 +56,16 @@ Run any program that uses `nextInt()` and type `hello` instead of a number.
 
 **1. What error did you get?**
 
-[your answer]
+[InputMismatchException when I type hello where it expects an integer.]
 
 **2. Is that a syntax error, a runtime error, or a logic error?**
 
-[your answer]
+[It’s a runtime error.]
 
 **3. Real applications never trust input. Name two things a user could type into your project's input that would break it.**
 
-[your answer]
+[They could type letters where the program expects a number, or enter a number outside the valid range (such as a negative number of people).]
 
 **4. We can't fix this properly until we have conditionals in Unit 3. But what *would* you want the program to do when someone types the wrong thing?**
 
-[your answer]
+[It should show a clear message explaining what input is expected, then let the user try again instead of crashing.]
