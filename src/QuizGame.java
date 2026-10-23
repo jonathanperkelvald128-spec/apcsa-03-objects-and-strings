@@ -15,7 +15,20 @@ public class QuizGame {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Your code here
+       System.out.print("What is your favorite game? ");
+String answer1 = input.nextLine();
+
+System.out.print("What is your favorite character? ");
+String answer2 = input.nextLine();
+
+System.out.print("What is your favorite level? ");
+String answer3 = input.nextLine();
+
+System.out.println();
+System.out.println("Your answers:");
+System.out.println("Favorite game: " + answer1);
+System.out.println("Favorite character: " + answer2);
+System.out.println("Favorite level: " + answer3);
 
         input.close();
     }
