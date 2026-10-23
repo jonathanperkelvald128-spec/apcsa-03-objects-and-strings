@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.Scanner;
 
 /**
@@ -12,27 +11,27 @@ import java.util.Scanner;
  *    you need a bare input.nextLine() in between.
  */
 public class PersonalGreeter {
-    public static void main(String[]         
-
-    import java.time.LocalDate;
-import java.util.Scanner;
-
-public class PersonalGreeter {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         System.out.print("What is your name? ");
-        String name = input.nextLine();
+String name = input.nextLine();
 
-        System.out.print("How old are you? ");
-        int age = input.nextInt();
-        input.nextLine();
+System.out.print("How old are you? ");
+int age = input.nextInt();
+input.nextLine(); // Consume the leftover newline
 
-        System.out.print("What is your favorite subject? ");
-        String subject = input.nextLine();
+System.out.print("What is your favorite subject? ");
+String subject = input.nextLine();
 
-        int currentYear = LocalDate.now().getYear();
-        int yearTurn100 = currentYear + (100 - age);
+int currentYear = java.time.LocalDate.now().getYear();
+int yearTurn100 = currentYear + (100 - age);
 
-        System.out.println();
-        System.out.println("Hello, " + name + ". You are " + age + " years old and your favorite subject is " + subject + ". You will t
+System.out.println();
+System.out.println("Hello, " + name + "! You are " + age
+        + " years old, and your favorite subject is " + subject
+        + ". You will turn 100 in " + yearTurn100 + ".");
+
+        input.close();
+    }
+}
